@@ -23,6 +23,7 @@ Objetivo principal: Conseguir agendamientos para "Auditoría de Automatización 
 - **Visual:** Logo proporcionado por usuario (Imagen contiene texto "IRAHR"). No duplicar texto en HTML. Ajustar altura.
 - **Barra de Integraciones:** Justo debajo del Hero. "Integramos las mejores tecnologías en tu flujo de trabajo". Logos (escala de grises): Make, ChatGPT, Calendly, LinkedIn, Slack.
 - **Interactividad:** Efecto "Glow" (Resplandor Cyan/Blanco) al pasar el cursor (Hover) sobre Tarjetas y Pasos.
+- **Micro-Diseño:** Flechas/Líneas conectoras entre pasos en "Cómo funciona" para indicar flujo.
 
 ### B. Problem Section (Dolores)
 - Tarjetas con **ICONOS LINEALES MINIMALISTAS** (SVG Wireframe, blanco o cian). NO Emojis.
@@ -40,6 +41,7 @@ Objetivo principal: Conseguir agendamientos para "Auditoría de Automatización 
 - Ahorro de +20h/semana.
 - Disponibilidad 24/7.
 - Sin sesgos humanos iniciales.
+- **Estilo:** Resaltar en **Negrita y Blanco** la parte impactante (ej. "**Ahorra +20 horas semanales**"). Resto en gis.
 
 ### E. FAQ Section
 - Título: "¿Dudas sobre automatizar tu reclutamiento?"
@@ -57,8 +59,8 @@ Objetivo principal: Conseguir agendamientos para "Auditoría de Automatización 
     3. Empresa (Opcional)
     4. Mensaje/Desafío (Textarea)
     5. Hidden: `_next` (Redirección a home o thank you), `_subject` ("Nuevo Lead desde Web IRAHR").
-- **Botón:** "Enviar Solicitud y Agendar".
-- **Estilo:** Inputs oscuros (#111), borde fino, focus Cyan Eléctrico.
+- **Botón:** "Enviar Solicitud y Agendar". Ancho limitado (max 450px), centrado.
+- **Estilo:** Inputs oscuros (#111), borde fino, focus Cyan Eléctrico. Placeholder gris claro (#AAA) para legibilidad.
 
 ### G. Footer
 - "IRAHR - Inteligencia aplicada al Capital Humano".
@@ -79,11 +81,19 @@ Objetivo principal: Conseguir agendamientos para "Auditoría de Automatización 
         - **Responsabilidad:** No responsabilidad por uso indebido o errores por navegadores desactualizados.
 - **Navegación:** Botón para "Volver al Inicio".
 
+### H. Success Page (success.html)
+- **Título:** "¡Solicitud Recibida!"
+- **Mensaje:** "Hemos recibido tus datos. Te contactaremos en menos de 24h para tu auditoría."
+- **Visual:** Icono de Check grande (Verde/Cian).
+- **Acción:** Botón "Volver al Inicio".
+- **Estilo:** Mismo Dark Mode.
+
 ## 4. Requisitos Técnicos
 - **Stack:** HTML5, CSS3 (Vanilla), JS (Vanilla).
 - **Archivos:**
     - `index.html`: Landing Page.
     - `privacy.html`: Página de Políticas.
+    - `success.html`: Página de Agradecimiento.
     - `style.css`: Estilos compartidos.
 
     - `script.js`: Interacciones simples (scroll suave, validación simple si hay form).

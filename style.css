@@ -213,6 +213,7 @@ h1, h2, h3 {
 
 .card:hover .icon {
     color: var(--accent-primary);
+    filter: drop-shadow(0 0 8px var(--accent-primary));
 }
 
 .icon-svg {
@@ -247,6 +248,29 @@ h1, h2, h3 {
 .step:hover {
     border-left-color: var(--accent-primary);
     box-shadow: -5px 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.step {
+    position: relative;
+}
+
+/* Flow Arrows - Desktop Only */
+@media (min-width: 900px) {
+    .step:not(:last-child)::after {
+        content: '→';
+        position: absolute;
+        right: -1.5rem;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #333;
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+    
+    .steps-container:hover .step:not(:last-child)::after {
+        color: var(--accent-primary);
+        text-shadow: 0 0 8px var(--accent-primary);
+    }
 }
 
 .step-number {
@@ -423,6 +447,18 @@ h1, h2, h3 {
 
 .form-group textarea {
     resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #AAAAAA; /* Lighter gray for readability */
+    opacity: 1;
+}
+
+.audit-form .cta-button-main {
+    max-width: 450px;
+    margin: 2rem auto 0;
+    display: block;
 }
 
 /* Footer */

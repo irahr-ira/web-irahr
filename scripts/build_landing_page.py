@@ -9,6 +9,7 @@ OUTPUT_DIR = BASE_DIR
 ICON_EMAIL = """<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>"""
 ICON_CLOCK = """<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>"""
 ICON_ADMIN = """<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>"""
+ICON_CHECK = """<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>"""
 
 # Content Definitions based on Directive
 HTML_CONTENT = f"""<!DOCTYPE html>
@@ -103,9 +104,9 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         <div class="section-container">
             <h2>Beneficios Inmediatos</h2>
             <ul class="benefits-list">
-                <li><span class="check">✓</span> Ahorra +20 horas semanales por reclutador.</li>
-                <li><span class="check">✓</span> Experiencia de candidato 24/7 (nunca dejes a nadie sin respuesta).</li>
-                <li><span class="check">✓</span> Reducción de sesgos humanos en el primer filtrado.</li>
+                <li><span class="check">✓</span> <strong>Ahorra +20 horas semanales</strong> por reclutador.</li>
+                <li><span class="check">✓</span> <strong>Experiencia de candidato 24/7</strong> (nunca dejes a nadie sin respuesta).</li>
+                <li><span class="check">✓</span> <strong>Reducción de sesgos humanos</strong> en el primer filtrado.</li>
             </ul>
         </div>
     </section>
@@ -143,7 +144,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
                 <!-- Hidden Configuration Inputs -->
                 <input type="hidden" name="_subject" value="Nuevo Lead desde Web IRAHR">
                 <input type="hidden" name="_captcha" value="false">
-                <!-- <input type="hidden" name="_next" value="http://yourdomain.com/thanks.html"> Optional Next Page -->
+                <input type="hidden" name="_next" value="https://irarh.com/success.html">
                 
                 <div class="form-grid">
                     <div class="form-group">
@@ -286,6 +287,59 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
             <p class="copyright">© 2026 IRAHR. Todos los derechos reservados.</p>
         </div>
     </footer>
+</body>
+</html>
+"""
+
+SUCCESS_CONTENT = """<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Solicitud Recibida! - IRAHR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.4));
+        }
+        .success-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        .success-text {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h1 class="success-title">¡Solicitud Recibida!</h1>
+        <p class="success-text">Hemos recibido tus datos. Te contactaremos en menos de 24h para tu auditoría.</p>
+        <a href="index.html" class="cta-button-main">Volver al Inicio</a>
+    </div>
 </body>
 </html>
 """
@@ -505,6 +559,7 @@ h1, h2, h3 {
 
 .card:hover .icon {
     color: var(--accent-primary);
+    filter: drop-shadow(0 0 8px var(--accent-primary));
 }
 
 .icon-svg {
@@ -539,6 +594,29 @@ h1, h2, h3 {
 .step:hover {
     border-left-color: var(--accent-primary);
     box-shadow: -5px 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.step {
+    position: relative;
+}
+
+/* Flow Arrows - Desktop Only */
+@media (min-width: 900px) {
+    .step:not(:last-child)::after {
+        content: '→';
+        position: absolute;
+        right: -1.5rem;
+        top: 40%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: #333;
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+    
+    .steps-container:hover .step:not(:last-child)::after {
+        color: var(--accent-primary);
+        text-shadow: 0 0 8px var(--accent-primary);
+    }
 }
 
 .step-number {
@@ -717,6 +795,18 @@ h1, h2, h3 {
     resize: vertical;
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #AAAAAA; /* Lighter gray for readability */
+    opacity: 1;
+}
+
+.audit-form .cta-button-main {
+    max-width: 450px;
+    margin: 2rem auto 0;
+    display: block;
+}
+
 /* Footer */
 footer {
     padding: 4rem 2rem;
@@ -826,6 +916,7 @@ def main():
     write_file('index.html', HTML_CONTENT)
     write_file('privacy.html', PRIVACY_CONTENT)
     write_file('style.css', CSS_CONTENT)
+    write_file('success.html', SUCCESS_CONTENT)
     write_file('script.js', JS_CONTENT)
     print("Build Complete.")
 
