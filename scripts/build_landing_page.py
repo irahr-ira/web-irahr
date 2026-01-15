@@ -17,24 +17,31 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRAHR | Automatización de Reclutamiento y Selección con IA</title>
-    <meta name="description" content="Agencia de automatización de RRHH para PyMEs. Filtra candidatos, agenda entrevistas y ahorra costes con Inteligencia Artificial. Auditoría gratuita disponible.">
+    <title>IRARH | Agencia de Automatización de Reclutamiento con IA</title>
+    <meta name="description" content="Automatiza tu selección de personal con Inteligencia Artificial. Filtra candidatos, agenda entrevistas y ahorra +20h semanales. Tu socio tecnológico en RRHH.">
+    <meta name="keywords" content="IA recursos humanos, automatización reclutamiento, agencia IA, selección de personal eficiente">
+    <link rel="icon" type="image/png" href="irahr_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header class="hero">
         <nav class="navbar">
             <div class="logo-container">
-                <!-- Using the generated image -->
-                <img src="irahr_logo.png" alt="IRAHR Logo" class="logo">
+                <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
             </div>
-            <a href="#audit" class="cta-button-small">Contacto</a>
+            <div class="nav-links">
+                <a href="#solution" class="nav-link">Soluciones</a>
+                <a href="#benefits" class="nav-link">Beneficios</a>
+                <a href="#audit" class="cta-button-small">Contacto</a>
+            </div>
         </nav>
         
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up">
             <h1>Automatiza tu proceso de selección y contrata talento top en <span class="highlight">tiempo récord</span>.</h1>
             <p class="subtitle">Ayudamos a PyMEs a filtrar candidatos y agendar entrevistas en piloto automático con IA. Deja de leer CVs, empieza a entrevistar.</p>
             <a href="#audit" class="cta-button-main">Solicitar Auditoría Gratuita</a>
@@ -43,18 +50,17 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
     <section class="tech-stack-bar">
         <div class="section-container">
-            <p class="tech-stack-title">Integramos las mejores tecnologías en tu flujo de trabajo</p>
+            <p class="tech-stack-title">Potenciado por la mejor tecnología:</p>
             <div class="tech-logos">
+                <span class="tech-logo">OpenAI</span>
                 <span class="tech-logo">Make</span>
-                <span class="tech-logo">ChatGPT</span>
-                <span class="tech-logo">Calendly</span>
                 <span class="tech-logo">LinkedIn</span>
-                <span class="tech-logo">Slack</span>
+                <span class="tech-logo">Google Workspace</span>
             </div>
         </div>
     </section>
 
-    <section class="problems">
+    <section class="problems" data-aos="fade-up">
         <div class="section-container">
             <h2>¿Te suena familiar?</h2>
             <div class="cards-grid">
@@ -77,7 +83,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         </div>
     </section>
 
-    <section class="solution">
+    <section class="solution" id="solution" data-aos="fade-up">
         <div class="section-container">
             <h2>Cómo funciona la magia</h2>
             <div class="steps-container">
@@ -100,18 +106,18 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits" data-aos="fade-up">
         <div class="section-container">
             <h2>Beneficios Inmediatos</h2>
             <ul class="benefits-list">
-                <li><span class="check">✓</span> <strong>Ahorra +20 horas semanales</strong> por reclutador.</li>
-                <li><span class="check">✓</span> <strong>Experiencia de candidato 24/7</strong> (nunca dejes a nadie sin respuesta).</li>
-                <li><span class="check">✓</span> <strong>Reducción de sesgos humanos</strong> en el primer filtrado.</li>
+                <li><span class="check">✓</span> <span><strong>Ahorra +20 horas semanales</strong> por reclutador.</span></li>
+                <li><span class="check">✓</span> <span><strong>Experiencia de candidato 24/7</strong> (nunca dejes a nadie sin respuesta).</span></li>
+                <li><span class="check">✓</span> <span><strong>Reducción de sesgos humanos</strong> en el primer filtrado.</span></li>
             </ul>
         </div>
     </section>
 
-    <section class="faq">
+    <section class="faq" data-aos="fade-up">
         <div class="section-container">
             <h2>¿Dudas sobre automatizar tu reclutamiento?</h2>
             <div class="faq-accordion">
@@ -135,7 +141,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         </div>
     </section>
 
-    <section class="contact-form-section" id="audit">
+    <section class="contact-form-section" id="audit" data-aos="fade-up">
         <div class="section-container">
             <h2>Solicitar Auditoría</h2>
             <p class="subtitle-cta">¿Listo para recuperar tus 20 horas semanales? La auditoría es gratuita.</p>
@@ -175,19 +181,38 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
     <footer id="footer">
         <div class="footer-content">
-            <h2>IRAHR</h2>
+            <h2>IRARH</h2>
             <p>Inteligencia aplicada al Capital Humano</p>
-            <a href="mailto:info@irahr.com" class="footer-link">info@irahr.com</a>
+            <a href="mailto:info@irarh.com" class="footer-link">info@irarh.com</a>
             <div class="footer-legal">
-                <a href="#" class="legal-link">Aviso Legal</a>
+                <a href="legal.html" class="legal-link">Aviso Legal</a>
                 <span class="separator">|</span>
                 <a href="privacy.html" class="legal-link">Política de Privacidad</a>
             </div>
-            <p class="copyright">© 2026 IRAHR. Todos los derechos reservados.</p>
+            <p class="copyright">© 2026 IRARH. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros para mejorar la experiencia. ¿Aceptas?</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cookie-btn accept">Aceptar Cookies</button>
+                <button id="necessary-cookies" class="cookie-btn necessary">Solo Necesarias</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({{
+        duration: 800,
+        once: true,
+        offset: 100
+      }});
+    </script>
 </body>
 </html>
 """
@@ -197,7 +222,7 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - IRAHR</title>
+    <title>Política de Privacidad - IRARH</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,7 +269,7 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
         <nav class="navbar">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="irahr_logo.png" alt="IRAHR Logo" class="logo">
+                    <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
                 </a>
             </div>
             <a href="index.html" class="cta-button-small">Volver al Inicio</a>
@@ -255,7 +280,7 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
         <h1>Política de Privacidad</h1>
         
         <h2>1. Responsable del tratamiento</h2>
-        <p>IRAHR (info@irahr.com).</p>
+        <p>IRARH (info@irahr.com).</p>
 
         <h2>2. Finalidad</h2>
         <p>Gestionar tu solicitud de auditoría y enviar comunicaciones sobre nuestros servicios. No enviamos SPAM.</p>
@@ -269,22 +294,103 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
         <h2>5. Derechos</h2>
         <p>Puedes acceder, rectificar o suprimir tus datos escribiendo a <a href="mailto:info@irahr.com" style="color: var(--accent-primary);">info@irahr.com</a>.</p>
 
-        <hr style="border: 0; border-top: 1px solid #333; margin: 3rem 0;">
+        <a href="index.html" class="back-button">← Volver a la Home</a>
+    </main>
 
-        <h1>Aviso Legal</h1>
+    <footer id="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2026 IRARH. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+"""
+
+LEGAL_CONTENT = """<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal - IRARH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-content {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: left;
+        }
+        .legal-content h1 {
+            margin-bottom: 2rem;
+            color: var(--accent-primary);
+        }
+        .legal-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+        .legal-content p, .legal-content li {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            border: 1px solid var(--accent-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" style="min-height: 20vh; height: auto;">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
+                </a>
+            </div>
+            <a href="index.html" class="cta-button-small">Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main class="legal-content">
+        <h1>Aviso Legal y Condiciones de Uso</h1>
         
-        <h2>Propiedad Intelectual</h2>
-        <p>El contenido de esta web (textos, imágenes, marca IRAHR) es propiedad exclusiva y está protegido por la normativa de Propiedad Intelectual e Industrial. Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+        <h2>1. Datos Identificativos</h2>
+        <p>En cumplimiento con el deber de información recogido en la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI), se reflejan los siguientes datos:</p>
+        <ul>
+            <li><strong>Titular:</strong> IRARH (Pendiente de Razón Social)</li>
+            <li><strong>Domicilio:</strong> (Pendiente de Domicilio)</li>
+            <li><strong>Email de contacto:</strong> info@irahr.com</li>
+        </ul>
 
-        <h2>Responsabilidad</h2>
-        <p>IRAHR no se hace responsable del uso indebido que los usuarios puedan hacer de los contenidos de la web, ni de los posibles errores de seguridad que se puedan producir por usar versiones de navegadores no actualizadas.</p>
+        <h2>2. Propiedad Intelectual</h2>
+        <p>El contenido de esta web (textos, imágenes, marca IRARH) es propiedad exclusiva y está protegido por la normativa de Propiedad Intelectual e Industrial. Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+
+        <h2>3. Exclusión de Garantías</h2>
+        <p>IRARH no se hace responsable del uso indebido que los usuarios puedan hacer de los contenidos de la web, ni de los posibles errores de seguridad que se puedan producir por usar versiones de navegadores no actualizadas.</p>
+        
+        <h2>4. Modificaciones</h2>
+        <p>IRARH se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal.</p>
 
         <a href="index.html" class="back-button">← Volver a la Home</a>
     </main>
 
-    <footer id="audit">
+    <footer id="footer">
         <div class="footer-content">
-            <p class="copyright">© 2026 IRAHR. Todos los derechos reservados.</p>
+            <p class="copyright">© 2026 IRARH. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
@@ -347,19 +453,20 @@ SUCCESS_CONTENT = """<!DOCTYPE html>
 CSS_CONTENT = """/* Variables */
 :root {
     --bg-color: #000000;
-    --bg-secondary: #111111;
+    --bg-secondary: #0a0a0a;
     --text-color: #FFFFFF;
     --text-muted: #888888;
     --accent-primary: #00E5FF;
     --accent-secondary: #C0C0C0;
     --font-main: 'Inter', sans-serif;
+    --nav-height: 80px;
 }
 
 /* Reset */
 * {
     margin: 0;
     padding: 0;
-    box_sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -367,6 +474,7 @@ body {
     color: var(--text-color);
     font-family: var(--font-main);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -386,42 +494,72 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* Header / Hero */
-.hero {
-    background: linear-gradient(180deg, rgba(0,229,255,0.05) 0%, rgba(0,0,0,1) 100%);
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-}
-
+/* Navbar */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 2rem;
+    height: var(--nav-height);
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .logo {
+    height: 45px;
     width: auto;
-    height: 80px;
     object-fit: contain;
+    mix-blend-mode: multiply; /* Helps if logo has white bg, though PNG transparent is best */
+}
+
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+        color: var(--accent-primary);
+    }
+}
+
+/* Header / Hero */
+.hero {
+    background: linear-gradient(180deg, rgba(0,229,255,0.05) 0%, rgba(0,0,0,1) 100%);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: calc(var(--nav-height) + 2rem);
+    text-align: center;
 }
 
 .hero-content {
@@ -445,21 +583,22 @@ h1, h2, h3 {
 
 /* Tech Stack Bar */
 .tech-stack-bar {
-    background-color: #050505;
-    border-bottom: 1px solid #222;
-    padding: 2rem 0;
+    background-color: #050505; /* Very dark grey */
+    border-bottom: 1px solid #1a1a1a;
+    padding: 1.5rem 0;
 }
 
 .tech-stack-bar .section-container {
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 .tech-stack-title {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    font-size: 0.8rem;
+    color: #555;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .tech-logos {
@@ -471,23 +610,26 @@ h1, h2, h3 {
 }
 
 .tech-logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #444; /* Grayscale */
+    color: #666; /* Grayscale */
     font-family: inherit;
     transition: color 0.3s;
     user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .tech-logo:hover {
-    color: #888;
+    color: #999;
 }
 
 /* Buttons */
 .cta-button-main {
     display: inline-block;
     background-color: var(--accent-primary);
-    color: var(--bg-color);
+    color: #000;
     padding: 1rem 2.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -496,8 +638,8 @@ h1, h2, h3 {
     letter-spacing: 1px;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    border: none; /* Reset for button elements */
-    font-size: 1rem; /* Reset font size for button */
+    border: none;
+    font-size: 1rem;
 }
 
 .cta-button-main:hover {
@@ -516,6 +658,7 @@ h1, h2, h3 {
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
     transition: all 0.3s;
+    font-size: 0.9rem;
 }
 
 .cta-button-small:hover {
@@ -533,27 +676,26 @@ h1, h2, h3 {
 
 .card {
     background-color: var(--bg-secondary);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 12px;
     border: 1px solid #222;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center icons */
+    align-items: center;
 }
 
-/* Interactive Glow - Hover */
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-primary);
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
 }
 
 .card .icon {
     width: 64px;
     height: 64px;
     margin-bottom: 1.5rem;
-    color: var(--text-color); /* White icon */
+    color: var(--text-color);
     transition: color 0.3s;
 }
 
@@ -570,6 +712,7 @@ h1, h2, h3 {
 .card h3 {
     margin-bottom: 1rem;
     color: var(--accent-primary);
+    font-size: 1.25rem;
 }
 
 /* Solution Steps */
@@ -583,47 +726,27 @@ h1, h2, h3 {
 
 .step {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
     text-align: left;
-    padding: 2rem;
-    border-left: 2px solid var(--accent-secondary);
+    padding: 2.5rem;
+    border-left: 2px solid #333;
     transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 0 12px 12px 0;
 }
 
-/* Interactive Glow - Hover Steps */
 .step:hover {
     border-left-color: var(--accent-primary);
-    box-shadow: -5px 0 15px rgba(0, 229, 255, 0.1);
-}
-
-.step {
-    position: relative;
-}
-
-/* Flow Arrows - Desktop Only */
-@media (min-width: 900px) {
-    .step:not(:last-child)::after {
-        content: '→';
-        position: absolute;
-        right: -1.5rem;
-        top: 40%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: #333;
-        transition: color 0.3s, text-shadow 0.3s;
-    }
-    
-    .steps-container:hover .step:not(:last-child)::after {
-        color: var(--accent-primary);
-        text-shadow: 0 0 8px var(--accent-primary);
-    }
+    background-color: rgba(255,255,255,0.04);
+    box-shadow: 10px 0 20px rgba(0,0,0,0.5);
 }
 
 .step-number {
     font-size: 3rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.05);
     margin-bottom: 0.5rem;
+    line-height: 1;
     transition: color 0.3s;
 }
 
@@ -633,32 +756,34 @@ h1, h2, h3 {
 
 .step h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 /* Benefits */
 .benefits {
-    background-color: var(--bg-secondary);
+    background-color: #0a0a0a;
 }
 
 .benefits-list {
     list-style: none;
-    max-width: 600px;
+    max-width: 700px;
     margin: 3rem auto 0;
     text-align: left;
 }
 
 .benefits-list li {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .check {
     color: var(--accent-primary);
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2;
 }
 
 /* FAQ Section */
@@ -673,7 +798,7 @@ h1, h2, h3 {
 }
 
 .faq-item {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #222;
     margin-bottom: 1rem;
 }
 
@@ -682,7 +807,7 @@ h1, h2, h3 {
     font-weight: 600;
     padding: 1.5rem 0;
     cursor: pointer;
-    list-style: none; /* Remove default arrow */
+    list-style: none;
     position: relative;
     padding-right: 2rem;
     transition: color 0.3s;
@@ -719,7 +844,7 @@ h1, h2, h3 {
 /* Contact/Form Section */
 .contact-form-section {
     padding: 6rem 2rem;
-    background: radial-gradient(circle at center, rgba(30,30,30, 0.5) 0%, rgba(0,0,0,1) 70%);
+    background: radial-gradient(circle at center, rgba(30,30,30, 0.5) 0%, rgba(0,0,0,1) 80%);
     text-align: center;
 }
 
@@ -797,7 +922,7 @@ h1, h2, h3 {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #AAAAAA; /* Lighter gray for readability */
+    color: #AAAAAA;
     opacity: 1;
 }
 
@@ -812,6 +937,7 @@ footer {
     padding: 4rem 2rem;
     text-align: center;
     border-top: 1px solid #222;
+    background-color: #050505;
 }
 
 .footer-link {
@@ -855,13 +981,94 @@ footer {
     }
     
     .navbar {
+        height: auto;
+        padding: 1rem;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .tech-logos {
-        gap: 1.5rem;
+    .hero {
+        padding-top: 120px; /* Adjust for taller mobile navbar if needed */
     }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid #333;
+    padding: 1.5rem;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cookie-content p {
+    color: #fff;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: none;
+}
+
+.cookie-btn.accept {
+    background-color: var(--accent-primary);
+    color: #000;
+}
+
+.cookie-btn.accept:hover {
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.cookie-btn.necessary {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.cookie-btn.necessary:hover {
+    background-color: #444;
 }
 """
 
@@ -890,6 +1097,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Cookie Banner Logic
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const necessaryBtn = document.getElementById('necessary-cookies');
+    
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    
+    if (!cookiesAccepted) {
+        // Show banner with a small delay for smoother entrance
+        setTimeout(() => {
+            cookieBanner.style.display = 'block';
+        }, 1000);
+    }
+    
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.style.display = 'none';
+        });
+    }
+
+    if (necessaryBtn) {
+        necessaryBtn.addEventListener('click', () => {
+             // Treat "Necessary Only" as accepted for the purpose of hiding the banner
+             // In a real implementation, this would handle consent status differently
+            localStorage.setItem('cookiesAccepted', 'necessary');
+            cookieBanner.style.display = 'none';
+        });
+    }
+
     // Elements to animate
     const cards = document.querySelectorAll('.card');
     const steps = document.querySelectorAll('.step');
@@ -912,9 +1149,10 @@ def write_file(filename, content):
     print(f"Created: {filepath}")
 
 def main():
-    print("Starting IRAHR Landing Page Build...")
+    print("Starting IRARH Landing Page Build...")
     write_file('index.html', HTML_CONTENT)
     write_file('privacy.html', PRIVACY_CONTENT)
+    write_file('legal.html', LEGAL_CONTENT)
     write_file('style.css', CSS_CONTENT)
     write_file('success.html', SUCCESS_CONTENT)
     write_file('script.js', JS_CONTENT)

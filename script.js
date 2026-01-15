@@ -23,6 +23,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Cookie Banner Logic
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const necessaryBtn = document.getElementById('necessary-cookies');
+    
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    
+    if (!cookiesAccepted) {
+        // Show banner with a small delay for smoother entrance
+        setTimeout(() => {
+            cookieBanner.style.display = 'block';
+        }, 1000);
+    }
+    
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.style.display = 'none';
+        });
+    }
+
+    if (necessaryBtn) {
+        necessaryBtn.addEventListener('click', () => {
+             // Treat "Necessary Only" as accepted for the purpose of hiding the banner
+             // In a real implementation, this would handle consent status differently
+            localStorage.setItem('cookiesAccepted', 'necessary');
+            cookieBanner.style.display = 'none';
+        });
+    }
+
     // Elements to animate
     const cards = document.querySelectorAll('.card');
     const steps = document.querySelectorAll('.step');

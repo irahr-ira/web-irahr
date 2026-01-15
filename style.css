@@ -26,9 +26,7 @@ body {
 }
 
 /* Typography */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -72,8 +70,7 @@ h3 {
     height: 45px;
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;
-    /* Helps if logo has white bg, though PNG transparent is best */
+    mix-blend-mode: multiply; /* Helps if logo has white bg, though PNG transparent is best */
 }
 
 .nav-links {
@@ -102,7 +99,7 @@ h3 {
 
 /* Header / Hero */
 .hero {
-    background: linear-gradient(180deg, rgba(0, 229, 255, 0.05) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, rgba(0,229,255,0.05) 0%, rgba(0,0,0,1) 100%);
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -134,8 +131,7 @@ h3 {
 
 /* Tech Stack Bar */
 .tech-stack-bar {
-    background-color: #050505;
-    /* Very dark grey */
+    background-color: #050505; /* Very dark grey */
     border-bottom: 1px solid #1a1a1a;
     padding: 1.5rem 0;
 }
@@ -164,8 +160,7 @@ h3 {
 .tech-logo {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #666;
-    /* Grayscale */
+    color: #666; /* Grayscale */
     font-family: inherit;
     transition: color 0.3s;
     user-select: none;
@@ -284,14 +279,14 @@ h3 {
     padding: 2.5rem;
     border-left: 2px solid #333;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(255,255,255,0.02);
     border-radius: 0 12px 12px 0;
 }
 
 .step:hover {
     border-left-color: var(--accent-primary);
-    background-color: rgba(255, 255, 255, 0.04);
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255,255,255,0.04);
+    box-shadow: 10px 0 20px rgba(0,0,0,0.5);
 }
 
 .step-number {
@@ -397,7 +392,7 @@ h3 {
 /* Contact/Form Section */
 .contact-form-section {
     padding: 6rem 2rem;
-    background: radial-gradient(circle at center, rgba(30, 30, 30, 0.5) 0%, rgba(0, 0, 0, 1) 80%);
+    background: radial-gradient(circle at center, rgba(30,30,30, 0.5) 0%, rgba(0,0,0,1) 80%);
     text-align: center;
 }
 
@@ -425,7 +420,6 @@ h3 {
     .form-grid {
         grid-template-columns: 1fr 1fr;
     }
-
     .full-width {
         grid-column: span 2;
     }
@@ -533,7 +527,7 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-
+    
     .navbar {
         height: auto;
         padding: 1rem;
@@ -542,8 +536,7 @@ footer {
     }
 
     .hero {
-        padding-top: 120px;
-        /* Adjust for taller mobile navbar if needed */
+        padding-top: 120px; /* Adjust for taller mobile navbar if needed */
     }
 
     .nav-links {
@@ -551,4 +544,77 @@ footer {
         gap: 1.5rem;
         font-size: 0.9rem;
     }
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid #333;
+    padding: 1.5rem;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cookie-content p {
+    color: #fff;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: none;
+}
+
+.cookie-btn.accept {
+    background-color: var(--accent-primary);
+    color: #000;
+}
+
+.cookie-btn.accept:hover {
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.cookie-btn.necessary {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.cookie-btn.necessary:hover {
+    background-color: #444;
 }
