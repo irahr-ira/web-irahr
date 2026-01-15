@@ -1,0 +1,483 @@
+/* Variables */
+:root {
+    --bg-color: #000000;
+    --bg-secondary: #111111;
+    --text-color: #FFFFFF;
+    --text-muted: #888888;
+    --accent-primary: #00E5FF;
+    --accent-secondary: #C0C0C0;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box_sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--accent-primary);
+}
+
+/* Layout */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Header / Hero */
+.hero {
+    background: linear-gradient(180deg, rgba(0,229,255,0.05) 0%, rgba(0,0,0,1) 100%);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tech Stack Bar */
+.tech-stack-bar {
+    background-color: #050505;
+    border-bottom: 1px solid #222;
+    padding: 2rem 0;
+}
+
+.tech-stack-bar .section-container {
+    padding: 1rem 2rem;
+}
+
+.tech-stack-title {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tech-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #444; /* Grayscale */
+    font-family: inherit;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.tech-logo:hover {
+    color: #888;
+}
+
+/* Buttons */
+.cta-button-main {
+    display: inline-block;
+    background-color: var(--accent-primary);
+    color: var(--bg-color);
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none; /* Reset for button elements */
+    font-size: 1rem; /* Reset font size for button */
+}
+
+.cta-button-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.width-full {
+    width: 100%;
+}
+
+.cta-button-small {
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--accent-secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.cta-button-small:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Problems Section (Cards) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center icons */
+}
+
+/* Interactive Glow - Hover */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.card .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    color: var(--text-color); /* White icon */
+    transition: color 0.3s;
+}
+
+.card:hover .icon {
+    color: var(--accent-primary);
+}
+
+.icon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+}
+
+/* Solution Steps */
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    padding: 2rem;
+    border-left: 2px solid var(--accent-secondary);
+    transition: all 0.3s ease;
+}
+
+/* Interactive Glow - Hover Steps */
+.step:hover {
+    border-left-color: var(--accent-primary);
+    box-shadow: -5px 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.step:hover .step-number {
+    color: rgba(0, 229, 255, 0.2);
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Benefits */
+.benefits {
+    background-color: var(--bg-secondary);
+}
+
+.benefits-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 3rem auto 0;
+    text-align: left;
+}
+
+.benefits-list li {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    color: var(--accent-primary);
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--bg-color);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #333;
+    margin-bottom: 1rem;
+}
+
+.faq-item summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    list-style: none; /* Remove default arrow */
+    position: relative;
+    padding-right: 2rem;
+    transition: color 0.3s;
+}
+
+.faq-item summary:hover {
+    color: var(--accent-primary);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--accent-primary);
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+}
+
+.faq-item p {
+    padding-bottom: 1.5rem;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact/Form Section */
+.contact-form-section {
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at center, rgba(30,30,30, 0.5) 0%, rgba(0,0,0,1) 70%);
+    text-align: center;
+}
+
+.subtitle-cta {
+    font-size: 1.5rem;
+    color: var(--accent-secondary);
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.audit-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .full-width {
+        grid-column: span 2;
+    }
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+    background-color: #1a1a1a;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin: 1rem 0;
+}
+
+.footer-legal {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.legal-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-link:hover {
+    color: #ccc;
+}
+
+.separator {
+    color: #444;
+    margin: 0 0.5rem;
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tech-logos {
+        gap: 1.5rem;
+    }
+}
