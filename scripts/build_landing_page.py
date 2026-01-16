@@ -20,7 +20,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     <title>IRARH | Agencia de Automatización de Reclutamiento con IA</title>
     <meta name="description" content="Automatiza tu selección de personal con Inteligencia Artificial. Filtra candidatos, agenda entrevistas y ahorra +20h semanales. Tu socio tecnológico en RRHH.">
     <meta name="keywords" content="IA recursos humanos, automatización reclutamiento, agencia IA, selección de personal eficiente">
-    <link rel="icon" type="image/png" href="irahr_logo.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,9 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 <body>
     <header class="hero">
         <nav class="navbar">
-            <div class="logo-container">
-                <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
-            </div>
+            <a href="#" class="logo-link">
+                <img src="irahr_logo_new.png" alt="IRAHR Logo" class="nav-logo">
+            </a>
             <div class="nav-links">
                 <a href="#solution" class="nav-link">Soluciones</a>
                 <a href="#benefits" class="nav-link">Beneficios</a>
@@ -267,11 +267,9 @@ PRIVACY_CONTENT = """<!DOCTYPE html>
 <body>
     <header class="hero" style="min-height: 20vh; height: auto;">
         <nav class="navbar">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
-                </a>
-            </div>
+            <a href="index.html" class="logo-link">
+                <img src="irahr_logo_new.png" alt="IRAHR Logo" class="nav-logo">
+            </a>
             <a href="index.html" class="cta-button-small">Volver al Inicio</a>
         </nav>
     </header>
@@ -356,11 +354,9 @@ LEGAL_CONTENT = """<!DOCTYPE html>
 <body>
     <header class="hero" style="min-height: 20vh; height: auto;">
         <nav class="navbar">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="irahr_logo.png" alt="IRARH Logo" class="logo">
-                </a>
-            </div>
+            <a href="index.html" class="logo-link">
+                <img src="irahr_logo_new.png" alt="IRAHR Logo" class="nav-logo">
+            </a>
             <a href="index.html" class="cta-button-small">Volver al Inicio</a>
         </nav>
     </header>
@@ -459,7 +455,7 @@ CSS_CONTENT = """/* Variables */
     --accent-primary: #00E5FF;
     --accent-secondary: #C0C0C0;
     --font-main: 'Inter', sans-serif;
-    --nav-height: 80px;
+    --nav-height: 120px;
 }
 
 /* Reset */
@@ -513,16 +509,15 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.logo-container {
+.logo-link {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    height: 45px;
+.nav-logo {
+    height: 90px;
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply; /* Helps if logo has white bg, though PNG transparent is best */
 }
 
 .nav-links {

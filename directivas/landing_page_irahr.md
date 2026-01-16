@@ -20,7 +20,7 @@ Objetivo principal: Conseguir agendamientos para "Auditoría de Automatización 
 - **H1:** "Automatiza tu proceso de selección y contrata talento top en tiempo récord."
 - **Subtítulo:** "Ayudamos a PyMEs a filtrar candidatos y agendar entrevistas en piloto automático con IA. Deja de leer CVs, empieza a entrevistar."
 - **CTA:** "Solicitar Auditoría Gratuita" (Botón con alto contraste, ej. Cyan con texto negro o borde brillante).
-- **Visual:** Logo proporcionado ('irahr_logo.png'). **Altura limitada a 45px**. Si tiene fondo blanco, usar `mix-blend-mode: multiply`. Añadir **FAVICON**.
+- **Visual:** Logo proporcionado ('irahr_logo_new.png'). **Altura limitada a 45px**. Si tiene fondo blanco, usar `mix-blend-mode: multiply`. Añadir **FAVICON**.
 - **Barra de Stack Tecnológico:** Justo debajo del Hero. Franja gris muy oscura. Texto: "POTENCIADO POR LA MEJOR TECNOLOGÍA:". Logos/Texto: OpenAI, Make, LinkedIn, Google Workspace.
 - **Navegación (Navbar):** Superior fija o semi-transparente (backdrop-filter: blur). Logo izquierda. Enlaces derecha: "Soluciones", "Beneficios", "Contacto".
 - **Animaciones:** "Scroll Reveal" (AOS) fade-up en secciones principales.

@@ -7,7 +7,7 @@
     --accent-primary: #00E5FF;
     --accent-secondary: #C0C0C0;
     --font-main: 'Inter', sans-serif;
-    --nav-height: 80px;
+    --nav-height: 120px;
 }
 
 /* Reset */
@@ -61,16 +61,15 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.logo-container {
+.logo-link {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    height: 45px;
+.nav-logo {
+    height: 90px;
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply; /* Helps if logo has white bg, though PNG transparent is best */
 }
 
 .nav-links {
